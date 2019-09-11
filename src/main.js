@@ -5,6 +5,8 @@ import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 
+window.App = App;
+
 new Vue({
   router,
   vuetify,
