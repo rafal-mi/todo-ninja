@@ -1,5 +1,11 @@
 # todo-ninja
 
+Vuetify Tutorial from YT
+https://www.youtube.com/watch?v=FGC48C2beoA
+
+Course files
+https://github.com/iamshaunjp/vuetify-playlist
+
 ## Project setup
 ```
 npm install
