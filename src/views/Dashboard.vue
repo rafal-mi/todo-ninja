@@ -3,7 +3,16 @@
     <h1 class="subheading grey--text">Dashboard</h1>
 
     <v-container class="my-5">
-        content
+        <v-row>
+          <v-col xs12 md6>
+            <v-btn outlined block class="">1</v-btn>
+          </v-col>
+          <v-col xs12 md6>
+            <v-btn outlined block class="primary">2</v-btn>
+          </v-col>
+
+
+        </v-row>
     </v-container>
 
   </div>
