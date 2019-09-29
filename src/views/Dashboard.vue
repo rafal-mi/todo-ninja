@@ -19,8 +19,9 @@
             <div>{{project.due}}</div>
           </v-col>
           <v-col xs="2" sm="4" md="2">
-            <div class="caption grey--text">Status</div>
-            <div>{{ project.status }}</div>
+            <div class="right">
+              <v-chip small :color="statusColors[project.status]" :class="`${project.status} white-text  my-2`">{{ project.status }} </v-chip>
+            </div>
           </v-col>
         </v-row>
         <v-divider></v-divider>
@@ -42,7 +43,14 @@ export default {
         { title: 'Code up the homepage', person: 'Chun Li', due: '10th Jan 2019', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
         { title: 'Design video thumbnails', person: 'Ryu', due: '20th Dec 2018', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
         { title: 'Create a community forum', person: 'Gouken', due: '20th Oct 2018', status: 'overdue', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
-      ]
+      ],
+      statusColors: {
+        complete: "#3cd1c2",
+        ongoing: "orange",
+        overdue: "#f83e70"
+
+      }
+
     }
   }
 
@@ -61,6 +69,18 @@ export default {
 
 .project.overdue {
   border-left: 4px solid tomato;
+}
+
+.v-chip.complete{
+  background: #3cd1c2;
+}
+
+.v-chip.ongoing{
+  background: #ffaa2c;
+}
+
+.v-chip.overdue{
+  background: #f83e70;
 }
 
 </style>
