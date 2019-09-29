@@ -3,6 +3,16 @@
     <h1 class="subheading grey--text">Dashboard</h1>
 
     <v-container class="my-5">
+      <v-row class="mb-3">
+        <v-btn small flat color="grey" @click="sortBy('title')">
+          <v-icon left small>mdi-folder</v-icon>
+          <span class="caption text-lowercase">By project name</span>
+        </v-btn>
+        <v-btn small flat color="grey" class="ml-2" @click="sortBy('person')">
+          <v-icon left small>mdi-account</v-icon>
+          <span class="caption text-lowercase">By person</span>
+        </v-btn>
+      </v-row>
 
       <v-card flat v-for="project in projects" :key="project.title">
         <v-row :class="`pa-3 project ${project.status}`">
@@ -51,6 +61,11 @@ export default {
 
       }
 
+    }
+  },
+  methods: {
+    sortBy(prop) {
+      this.projects.sort((a, b) => a[prop] < b[prop]? -1 : 1)
     }
   }
 
