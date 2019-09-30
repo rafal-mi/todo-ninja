@@ -5,6 +5,7 @@ import Projects from './views/Projects.vue'
 import Team from './views/Team.vue'
 
 import UseSlots from './components/UseSlots'
+import MyMenuUse from './components/MyMenuUse'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/use-slots',
       name: 'use-slots',
       component: UseSlots
+    },
+    {
+      path: '/menu',
+      name: 'menu',
+      component: MyMenuUse
     }
   ]
 })
