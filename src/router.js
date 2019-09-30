@@ -4,6 +4,8 @@ import Dashboard from './views/Dashboard.vue'
 import Projects from './views/Projects.vue'
 import Team from './views/Team.vue'
 
+import UseSlots from './components/UseSlots'
+
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +26,11 @@ export default new Router({
       path: '/team',
       name: 'team',
       component: Team
+    },
+    {
+      path: '/use-slots',
+      name: 'use-slots',
+      component: UseSlots
     }
   ]
 })
