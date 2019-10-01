@@ -1,15 +1,18 @@
 <template>
   <div class="container">
-    <slot name="activator" v-bind:handlers="handlers">
-      
-    </slot>
-
+    <p>MyMenu: The 'handlers' object is {{ handlers }} </p>
+    <slot name="activator" v-bind:handlers="handlers"></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'my-menu',
-  props: ['handlers']
-}
+  name: "my-menu",
+  props: {
+    handlers: {
+      type: Object,
+      default: () => {}
+    }
+  }
+};
 </script>

@@ -12,11 +12,13 @@
         <p>Here's some contact info</p>
       </template>
     </base-layout>
-    <current-user :user="user">
-    <template v-slot:default="{ user }">
-      {{ user.firstName }}
-      
-    </template>
+    <current-user></current-user>
+    <br/>
+    <current-user></current-user>
+    <current-user>
+      <template v-slot:default="slotProps">
+        {{ slotProps.user.firstName }}
+      </template>
     </current-user>
   </div>
 </template>
@@ -30,9 +32,11 @@ export default {
   components: { BaseLayout, CurrentUser },
   data() {
     return {
-      user: {
-        firstName: 'Anna',
-        lastName: 'Nyrek'
+      slotProps: {
+        user: {
+          firstName: 'Anna',
+          lastName: 'Nyrek'
+        }
       }
     }
   }

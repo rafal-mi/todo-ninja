@@ -10,6 +10,13 @@
 <script>
 export default {
     name: 'CurrentUser',
-    props: ['user']
+    data() {
+      return {
+        user: {
+          firstName: 'Anna',
+          lastName: 'Nyrek'
+        }
+      }
+    }
 }
 </script>
