@@ -15,8 +15,6 @@
         Your Profile
       </navigation-link>
 
-      <current-user :user="user"></current-user>
-
       <v-menu offset-y>
         <template v-slot:activator="{ on }">
           <v-btn text color="grey" dark v-on="on">Dropdown</v-btn>
@@ -64,12 +62,11 @@
 </template>
 
 <script>
-import CurrentUser from "./CurrentUser";
 import NavigationLink from "./NavigationLink";
 
 export default {
   name: "Navbar",
-  components: { NavigationLink, CurrentUser },
+  components: { NavigationLink },
   data: () => ({
     drawer: false,
     links: [
